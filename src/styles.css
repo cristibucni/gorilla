@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~angular-vertical-timeline/dist/vertical-timeline.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html {
+  height: 100vh;
+}
+
+.character-info {
+  padding: 4px;
+  background: #595F6C;
+  color: #fff;
+}
+
+.character-info {
+  display: flex;
+  align-content: center;
+  padding-left: 8px;
+}
+
+.currency {
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+}

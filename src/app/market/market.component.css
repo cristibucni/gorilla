@@ -1,0 +1,37 @@
+.market-wrapper {
+  margin-top: 16px;
+}
+
+.market-item {
+  height: 35px;
+  width: 35px;
+  border: 1px solid #000;
+  margin: 2px;
+  list-style-type: none;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #C6C6C6;
+}
+
+.flex-container:hover {
+  background-color: #DADDE2
+}
+
+.item-name {
+  padding-left: 4px;
+}
+
+.item-price {
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+.item-currency {
+  width: 18px;
+  height: 18px;
+  align-items: center;
+}

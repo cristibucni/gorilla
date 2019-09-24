@@ -1,0 +1,50 @@
+<div *ngIf="!gorilla">
+  <div class="row">
+    <div class="col-sm-4">
+      <h4>Create a character</h4>
+      <input placeholder="Nickname" required [(ngModel)]="gorillaName" />
+      <div>
+        <button (click)="openModal('class')">Class</button>
+      </div>
+      <div>
+        <button (click)="openModal('gender')">Gender</button>
+      </div>
+
+      <jw-modal id="class">
+        Choose your class
+        <div
+          *ngFor="let class of classes"
+          id="{{ class }}"
+          (click)="onClassSelect($event)"
+        >
+          {{ class }}
+        </div>
+        <button (click)="closeModal('class')">Close</button>
+      </jw-modal>
+
+      <jw-modal id="gender">
+        Choose your gender
+        <div
+          *ngFor="let gender of genders"
+          id="{{ gender }}"
+          (click)="onGenderSelect($event)"
+        >
+          {{ gender }}
+        </div>
+        <button (click)="closeModal('gender')">Close</button>
+      </jw-modal>
+
+      <button (click)="saveGorilla()">Save my gorilla</button>
+    </div>
+
+    <div class="col-sm-8">
+      <div class="gorilla-container">
+        <app-gorilla
+          [gorillaName]="gorillaName"
+          [gorillaClass]="gorillaClass"
+          [gorillaGender]="gorillaGender"
+        ></app-gorilla>
+      </div>
+    </div>
+  </div>
+</div>

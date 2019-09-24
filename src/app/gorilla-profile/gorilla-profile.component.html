@@ -1,0 +1,25 @@
+<div *ngIf="gorilla">
+  <div class="row">
+    <div class="col">
+      <div class="wrapper">
+        <div>
+          <div class="badge-promo">
+            <span class="badge-promo-content">
+              {{ gorilla.name }}
+            </span>
+          </div>
+          <div class="card">
+            <div class="codepen-logo">
+              <i class="fa fa-codepen" aria-hidden="true"></i>
+            </div>
+            <p>Gorilla body</p>
+          </div>
+          <div class="gorilla-class">{{ gorilla.class }}</div>
+          <div class="hp">&#10084; {{ gorilla.hp }}</div>
+          <div class="damage">&#9874; {{ gorilla.damage }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col"><app-inventory></app-inventory></div>
+  </div>
+</div>

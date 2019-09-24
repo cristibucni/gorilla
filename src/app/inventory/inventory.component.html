@@ -1,0 +1,24 @@
+<div class="inventory">
+  <h5>Inventory</h5>
+  <div
+    class="flex-container"
+    *ngFor="let item of inventory; let i = index"
+    id="{{ item.id }}"
+    (click)="onSellClick(item)"
+  >
+    <div class="inventory-item">
+      <svg-icon [applyCss]="true" src="{{ item.icon }}"></svg-icon>
+    </div>
+    <div class="item-name">{{ item.name }}</div>
+    <div *ngIf="item.type === 'Weapon'; else elseBlock" class="item-attribute">
+      {{ item.damage }} &#9874;
+    </div>
+    <ng-template #elseBlock>
+      <div class="item-attribute">{{ item.hp }} &#10084;</div>
+    </ng-template>
+
+    <div class="item-currency">
+      <svg-icon src="../../assets/images/coins.svg"></svg-icon>
+    </div>
+  </div>
+</div>

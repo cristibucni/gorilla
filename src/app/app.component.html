@@ -1,0 +1,29 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" routerLink="/">Home</a>
+    <a class="nav-item nav-link" routerLink="/gorilla-profile">
+      Gorilla Profile
+    </a>
+    <a class="nav-item nav-link" routerLink="/market">
+      Market
+    </a>
+  </div>
+  <div class="navbar-nav ml-auto">
+    <a class="nav-item nav-link ml-auto" (click)="logout()">
+      Logout
+    </a>
+  </div>
+</nav>
+
+<div *ngIf="gorilla" class="character-info">
+  <div>{{ gorilla.name }}</div>
+  <div class="ml-auto">{{ gorilla.coins }}</div>
+  <div class="currency">
+    <svg-icon src="../assets/images/coins.svg"></svg-icon>
+  </div>
+</div>
+<!-- main app container -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

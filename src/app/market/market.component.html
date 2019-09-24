@@ -1,0 +1,19 @@
+<div class="market-wrapper">
+  <div
+    class="flex-container"
+    *ngFor="let item of items; let i = index"
+    id="{{ item.id }}"
+    (click)="buyItem(item)"
+  >
+    <div class="market-item">
+      <svg-icon [applyCss]="true" src="{{ item.icon }}"></svg-icon>
+    </div>
+    <div class="item-name">{{ item.name }}</div>
+    <div class="item-price">
+      {{ item.price }}
+    </div>
+    <div class="item-currency">
+      <svg-icon src="../../assets/images/coins.svg"></svg-icon>
+    </div>
+  </div>
+</div>
